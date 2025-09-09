@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'state/mct_state.dart';
-import 'screens/health_worker/health_worker_dashboard.dart'; // new dashboard
-import 'screens/search_child_screen.dart'; // for navigation later
+import 'screens/healthcare_worker_dashboard.dart'; // directly under screens
+import 'screens/search_child_screen.dart';        // directly under screens
 
 void main() {
   runApp(const MCTApp());
@@ -22,10 +22,9 @@ class MCTApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.teal,
         ),
-        home: const HealthWorkerDashboard(), // opens this dashboard first
+        home: const HealthcareWorkerDashboard(), // note the class name
         routes: {
-          '/search-child': (context) => const SearchChildScreen(), // for navigation
-          // Add other routes here if needed
+          '/search-child': (context) => const SearchChildScreen(),
         },
       ),
     );
