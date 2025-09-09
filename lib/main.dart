@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'state/mct_state.dart';
-import 'screens/child_list_screen.dart';
+import 'screens/health_worker/health_worker_dashboard.dart'; // new dashboard
+import 'screens/search_child_screen.dart'; // for navigation later
 
 void main() {
   runApp(const MCTApp());
@@ -16,12 +17,16 @@ class MCTApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => MCTState(),
       child: MaterialApp(
-        title: 'Migrant Child Tracker',
+        debugShowCheckedModeBanner: false,
+        title: 'Migrant Child Tracking',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          useMaterial3: true,
+          primarySwatch: Colors.teal,
         ),
-        home: const ChildListScreen(),
+        home: const HealthWorkerDashboard(), // opens this dashboard first
+        routes: {
+          '/search-child': (context) => const SearchChildScreen(), // for navigation
+          // Add other routes here if needed
+        },
       ),
     );
   }
