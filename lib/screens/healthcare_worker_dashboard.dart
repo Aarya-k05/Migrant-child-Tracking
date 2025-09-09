@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'add_child_screen.dart';
 import 'search_child_screen.dart';
 
-class HealthWorkerDashboard extends StatelessWidget {
-  const HealthWorkerDashboard({super.key});
+class HealthcareWorkerDashboard extends StatelessWidget {
+  const HealthcareWorkerDashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,14 +72,4 @@ class _DashboardCard extends StatelessWidget {
               Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+                  fontSize:
