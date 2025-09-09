@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../add_child_screen.dart';
+import 'add_child_screen.dart';
 import 'search_child_screen.dart';
 
 class HealthWorkerDashboard extends StatelessWidget {
